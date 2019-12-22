@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F265548F-EE10-460B-89B9-1D7448AE4454}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SCADA</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseComponent.cpp" />
+    <ClCompile Include="CCTVCamera.cpp" />
+    <ClCompile Include="CornerPipe.cpp" />
+    <ClCompile Include="CrossJunction.cpp" />
+    <ClCompile Include="HydraulicValve.cpp" />
+    <ClCompile Include="IronPipe.cpp" />
+    <ClCompile Include="PneumaticPump.cpp" />
+    <ClCompile Include="SanitizationDrain.cpp" />
+    <ClCompile Include="SCADA.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="StorageTank.cpp" />
+    <ClCompile Include="SuspendedConceteGroundFloor.cpp" />
+    <ClCompile Include="ThreeWayJunction.cpp" />
+    <ClCompile Include="TwoWayJunction.cpp" />
+    <ClCompile Include="T_Junction.cpp" />
+    <ClCompile Include="WaterSource.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseComponent.h" />
+    <ClInclude Include="CCTVCamera.h" />
+    <ClInclude Include="ComClass.h" />
+    <ClInclude Include="ComponentList.h" />
+    <ClInclude Include="ComPortTransactions.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="CornerPipe.h" />
+    <ClInclude Include="CrossJunction.h" />
+    <ClInclude Include="HydraulicValve.h" />
+    <ClInclude Include="IronPipe.h" />
+    <ClInclude Include="PneumaticPump.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SanitizationDrain.h" />
+    <ClInclude Include="SCADA.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StorageTank.h" />
+    <ClInclude Include="SuspendedConcreteGroundFloor.h" />
+    <ClInclude Include="ThreeWayJunction.h" />
+    <ClInclude Include="TwoWayJunction.h" />
+    <ClInclude Include="T_Junction.h" />
+    <ClInclude Include="WaterSource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="SCADA.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SCADA.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
